@@ -1,0 +1,12 @@
+{
+  "name": "jnhi.jnhi-plugin",
+  "version": "0.3.4",
+  "description": "Babelfish tori China got some mike tango",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./chine-white": "./chine-white.js"
+  },
+  "license": "MIT"
+}
