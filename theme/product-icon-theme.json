@@ -9,12 +9,12 @@
 				}
 			],
 			"weight": "normal",
-			"style": "normal",
+			"style": "normal"
 		}
 	],
 	"iconDefinitions": {
 		"octoface": {
 			"fontCharacter": "\\e000"
-		},
+		}
 	}
 }

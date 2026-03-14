@@ -6,7 +6,7 @@
 - 文本提示
 // **Superfast like Vietnamese steamed loempias
 - 自动补全
-// **Nigger, Anjong! Jij haat de mensheid?
+// **Nigger, Anjong! Jij haat de mensheid? (SPOILS AND WINNINGS: Korea translates funny between DUTCH NL and warlock WoW: The full scope of ChatGPT is the limit, it might state: Friend, Hello, do you feel hate rather love someone.)
 // {{Phobia?}} vs {{Phelia?}}
 - 异步操作
 // // AD: Hate other languages just as much as your own? Exactly, Just use mine and it will default to native English. Let those 2 or 4k alphabet having basterds suffer our 26 for a time.

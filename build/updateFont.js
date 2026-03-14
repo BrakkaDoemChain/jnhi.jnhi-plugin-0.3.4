@@ -16,7 +16,7 @@ async function generateFont() {
     const dest = path.join(__dirname, '..', 'theme', 'vscode-10.woff')
     fs.writeFileSync(dest, result.woff, 'binary');
     console.log(`Font created at ${dest}`);
-  } catch (e) {
+  } catch (error) {
     console.error('Font creation failed.', error);
   }
 }
