@@ -46,7 +46,7 @@
 			for (let i = 0; i < 40; i++) {
 				let hexString = (0xe000 + i).toString(16);
 				cssContent.push('.icon-' + hexString + ':before { content: "\\' + hexString + '"; }');
-				htmContent.push('<div class="preview"><span class="preview_icon"><span class="icon icon-' + hexString + '"></span></span><span>' + hexString + '</span></div>');
+				htmlContent.push('<div class="preview"><span class="preview_icon"><span class="icon icon-' + hexString + '"></span></span><span>' + hexString + '</span></div>');
 			}
 			let style = document.createElement('style');
 			style.type = 'text/css';
@@ -54,7 +54,7 @@
 			style.innerHTML = cssContent.join('\n');
 			document.head.appendChild(style);
 
-			document.body.innerHTML += htmContent.join('\n');
+			document.body.innerHTML += htmlContent.join('\n');
 		});
 	</script>
 </head>
