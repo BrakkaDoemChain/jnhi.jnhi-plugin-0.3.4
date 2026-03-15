@@ -1,0 +1,12 @@
+{
+  "name": "jnhi.jnhi-plugin",
+  "version": "0.3.4",
+  "description": "Plugin package exposing the main jnhi plugin and an additional 'chine-white' module.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./chine-white": "./chine-white.js"
+  },
+  "license": "MIT"
+}
