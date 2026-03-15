@@ -1,7 +1,7 @@
 {
   "name": "jnhi.jnhi-plugin",
   "version": "0.3.4",
-  "description": "Babelfish tori China got some mike tango",
+  "description": "Plugin package exposing the main jnhi plugin and an additional 'chine-white' module.",
   "type": "module",
   "main": "index.js",
   "exports": {
