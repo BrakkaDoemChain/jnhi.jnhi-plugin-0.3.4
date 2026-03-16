@@ -14,7 +14,7 @@
 	],
 	"iconDefinitions": {
 		"octoface": {
-			"fontCharacter": "\\e000"
+			"fontCharacter": "\uE000"
 		}
 	}
 }
