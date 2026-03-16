@@ -37,11 +37,12 @@ class TextDecoration {
 
         this.refreshDecoration();
 
-        vscode.window.onDidChangeTextEditorSelection(event => {
+        const selectionChangeDisposable = vscode.window.onDidChangeTextEditorSelection(event => {
             if (vscode.window.activeTextEditor && event.textEditor.document === vscode.window.activeTextEditor.document) {
                 this.refreshDecoration();
             }
         }, this);
+        context.subscriptions.push(selectionChangeDisposable);
 
         vscode.workspace.onDidChangeTextDocument(event => {
             if (vscode.window.activeTextEditor && event.document === vscode.window.activeTextEditor.document) {
