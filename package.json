@@ -71,7 +71,7 @@
 		},
 		"commands": [
 			{
-				"command": "extension.updataLang",
+				"command": "extension.updateLang",
 				"title": "更新多语言字典"
 			},
 			{
@@ -88,7 +88,7 @@
 				},
 				{
 					"when": "editorHasSelection",
-					"command": "extension.updataLang",
+					"command": "extension.updateLang",
 					"group": "navigation"
 				}
 			]
