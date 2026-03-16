@@ -118,10 +118,5 @@
 		"json": "^11.0.0",
 		"packagename": "^2.0.1",
 		"tsc": "^2.0.3"
-	},
-	"__metadata": {
-		"installedTimestamp": 1773417573636,
-		"targetPlatform": "undefined",
-		"size": 179953
 	}
 }
