@@ -381,6 +381,7 @@ export async function activate(context: vscode.ExtensionContext) {
     statusBar = new StatusBar();
     console.log("\u72B6\u6001\u680F\u542F\u52A8\u6210\u529F\uFF01");
     outputChannel.appendLine("\u542F\u52A8\u63D2\u4EF6");
+    context.subscriptions.push(statusBar, outputChannel);
 
     await updateLanguageMap().then(() => {
         const textMatch = new TextMatch(context);
@@ -408,9 +409,10 @@ export async function activate(context: vscode.ExtensionContext) {
             });
         }));
 
-        vscode.workspace.onDidSaveTextDocument(async doc => {
+        const saveSubscription = vscode.workspace.onDidSaveTextDocument(async doc => {
             // Document save logic
         });
+        context.subscriptions.push(saveSubscription);
 
         statusBar.setDownStateText("\u63D2\u4EF6\u542F\u52A8\u6210\u529F\uFF01");
         outputChannel.appendLine("\u63D2\u4EF6\u542F\u52A8\u6210\u529F\uFF01");
