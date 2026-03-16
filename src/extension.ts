@@ -24,6 +24,7 @@ let locJsonPath = "";
 // Text Decoration
 class TextDecoration {
     private smallNumberDecorationType: vscode.TextEditorDecorationType;
+    private refreshTimeout: NodeJS.Timeout | undefined;
 
     constructor(context: vscode.ExtensionContext) {
         this.smallNumberDecorationType = vscode.window.createTextEditorDecorationType({
@@ -35,20 +36,29 @@ class TextDecoration {
             overviewRulerLane: vscode.OverviewRulerLane.Right
         });
 
-        this.refreshDecoration();
+        this.scheduleRefresh();
 
         const selectionChangeDisposable = vscode.window.onDidChangeTextEditorSelection(event => {
             if (vscode.window.activeTextEditor && event.textEditor.document === vscode.window.activeTextEditor.document) {
-                this.refreshDecoration();
+                this.scheduleRefresh();
             }
         }, this);
         context.subscriptions.push(selectionChangeDisposable);
 
         vscode.workspace.onDidChangeTextDocument(event => {
             if (vscode.window.activeTextEditor && event.document === vscode.window.activeTextEditor.document) {
-                this.refreshDecoration();
+                this.scheduleRefresh();
             }
         }, null, context.subscriptions);
+    }
+
+    private scheduleRefresh() {
+        if (this.refreshTimeout) {
+            clearTimeout(this.refreshTimeout);
+        }
+        this.refreshTimeout = setTimeout(() => {
+            this.refreshDecoration();
+        }, 100);
     }
 
     refreshDecoration() {
